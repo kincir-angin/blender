@@ -486,11 +486,11 @@ static void gpencil_interpolate_set_points(bContext *C, tGPDinterpolate *tgpi)
       continue;
     }
 
-    bGPDframe *gpf_prv = gpencil_get_previous_keyframe(gpl, scene->r.cfra, exclude_breakdowns);
+    bGPDframe *gpf_prv = gpencil_get_previous_keyframe(gpl, scene->r.cfra);
     if (gpf_prv == NULL) {
       continue;
     }
-    bGPDframe *gpf_next = gpencil_get_next_keyframe(gpl, scene->r.cfra, exclude_breakdowns);
+    bGPDframe *gpf_next = gpencil_get_next_keyframe(gpl, scene->r.cfra);
     if (gpf_next == NULL) {
       continue;
     }
