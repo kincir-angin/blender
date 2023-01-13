@@ -7,7 +7,7 @@ from bpy.app.translations import pgettext_iface as iface_
 
 class TOPBAR_HT_upper_bar(Header):
     bl_space_type = 'TOPBAR'
-
+    
     def draw(self, context):
         region = context.region
 
@@ -28,7 +28,8 @@ class TOPBAR_HT_upper_bar(Header):
 
         if not screen.show_fullscreen:
             layout.template_ID_tabs(
-                window, "workspace",
+                window, 
+                "workspace",
                 new="workspace.add",
                 menu="TOPBAR_MT_workspace_menu",
             )

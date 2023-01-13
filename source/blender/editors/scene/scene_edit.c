@@ -49,6 +49,7 @@
 
 static Scene *scene_add(Main *bmain, Scene *scene_old, eSceneCopyMethod method)
 {
+  printf("Added new scene\n");
   Scene *scene_new = NULL;
   if (method == SCE_COPY_NEW) {
     scene_new = BKE_scene_add(bmain, DATA_("Scene"));

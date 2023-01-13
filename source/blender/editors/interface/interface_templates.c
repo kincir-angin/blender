@@ -1616,6 +1616,7 @@ static void template_ID_tabs(const bContext *C,
 
   LISTBASE_FOREACH (LinkData *, link, &ordered) {
     ID *id = link->data;
+    printf("NAME: %s\n", id->name);
     const int name_width = UI_fontstyle_string_width(&style->widget, id->name + 2);
     const int but_width = name_width + UI_UNIT_X;
 
